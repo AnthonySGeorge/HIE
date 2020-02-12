@@ -1,9 +1,7 @@
 export const state = () => ({
   documents: [],
-  disciplines: [],
+  // disciplines: [],
 });
-
-console.log ('documents: ' + state.documents);
 
 export const mutations = {
   SET_DOCUMENTS (state, documents) {
@@ -21,7 +19,6 @@ export const actions = {
     let {data: documents} = await getData ('/search', this.$axios);
     // deserializeDocuments (documents);
     commit ('SET_DOCUMENTS', documents);
-    console.log ('documents: ' + state.documents);
   },
   // async loadAllDisciplines({commit}) {
   //   let {data: disciplines} = await getData ('/search', this.$axios);

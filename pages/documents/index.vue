@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>DocumentS - index.vue</p>
     <b-container>
       <b-row>
         <b-card
@@ -30,12 +31,8 @@
           <b-card-text class="d-flex w-100 justify-content-between">
             <small>Date Issued: {{ document.DATE_ISSUED | date }}</small>
           </b-card-text>
-          <!-- <b-button href="#" variant="primary">Go somewhere</b-button> -->
-          <nuxt-link :to="`/documents/${document.NODE_ID}`">
-            {{
-            document.TITLE
-            }}
-          </nuxt-link>
+
+          <nuxt-link :to="{ path: `/document/${document.NODE_ID}`}">{{document.TITLE}}</nuxt-link>
         </b-card>
       </b-row>
     </b-container>

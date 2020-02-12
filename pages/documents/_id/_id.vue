@@ -1,29 +1,26 @@
 <template>
   <div>
+    <p>DocumentS - _id.vue</p>
     <nuxt-child :document="document" />
   </div>
 </template>
 
 <script>
-import axios from "axios";
 import { mapState } from "vuex";
 export default {
-  head() {
-    return {
-      title: "Design Manual for Roads and Bridges (DMRB)"
-      // titleTemplate: `%s ${this.document.TITLE} - Design Manual for Roads and Bridges (DMRB)`
-    };
-  },
-  // async fetch({ $axios, params, store }) {
-  //   let response = await $axios.getData(`/search/${params.NODEID}`);
-  //   let document = response.data.data;
+  async fetch({ $axios, params, store }) {
+    let response = await $axios.get(`/search/${params.id}`);
+    let document = response.data.data;
 
-  //   store.commit("SET_CURRENT_DOCUMENT", document);
-  // },
+    store.commit("SET_CURRENT_DOCUMENT", DocumentType);
+  },
   computed: {
-    ...mapState(["documents"])
+    ...mapState({
+      document: "currentDocument"
+    })
   }
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+</style>

@@ -2,6 +2,7 @@
   <div>
     <b-container>
       <b-breadcrumb :items="bcItems"></b-breadcrumb>
+      <p>Homepage - index.vue</p>
       <div class="search mx-auto">
         <b-form inline>
           <label class="sr-only" for="search-input">Search documents:</label>
