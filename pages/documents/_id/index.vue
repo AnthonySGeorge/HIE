@@ -1,10 +1,13 @@
 <template>
   <div>
     <div>
-      <h1>We are in document: {{document.TITLE}}</h1>
       <b-container>
         <b-row>
-          <!-- <b-card tag="article" style="max-width: 20rem;" class="mb-2 mr-sm-2 mb-sm-0">
+          <h1>We are in document: {{document.TITLE}}</h1>
+          <h2>Node ID: {{document.NODE_ID}}</h2>
+        </b-row>
+        <b-row>
+          <b-card tag="article" class="mb-2 mr-sm-2 mb-sm-0">
             <b-card-title>{{ document.TITLE }}</b-card-title>
             <b-card-text class="d-flex w-100 justify-content-between">
               <small>
@@ -24,14 +27,10 @@
               </small>
             </b-card-text>
             <b-card-text class="d-flex w-100 justify-content-between">
-          <!-- <small>Date Issued: {{ document.DATE_ISSUED | date }}</small>-->
-          <!-- <p>{{document.NODE_ID}}</p>
+              <!-- <small>Date Issued: {{ document.DATE_ISSUED | date }}</small>-->
+              <!-- <p>{{document.NODE_ID}}</p>-->
             </b-card-text>
-          </b-card>-->
-          <div>
-            <h2>My Table</h2>
-            <b-table stacked="lg" :document="document"></b-table>
-          </div>
+          </b-card>
         </b-row>
       </b-container>
     </div>

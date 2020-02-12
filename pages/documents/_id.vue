@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>YOU ARE HERE</h1>
     <nuxt-child :document="document" />
   </div>
 </template>
