@@ -47,7 +47,7 @@ export default {
       console.log(
         "we are in: " + this.documents + " route: " + this.$route.params.NODE_ID
       );
-      return this.documents.find(d => d.id === this.$route.params.NODE_ID);
+      return this.documents.find(d => d.NODE_ID === this.$route.params.id);
     }
   }
 };
