@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container>
-      <b-breadcrumb :items="bcItems"></b-breadcrumb>
+      <b-breadcrumb :items="$store.state.bcItems"></b-breadcrumb>
       <p>Homepage - index.vue</p>
       <div class="search mx-auto">
         <b-form inline>
@@ -19,7 +19,7 @@
       <h2>See documents by discipline</h2>
       <b-row>
         <div
-          v-for="(discipline, index) in disciplines"
+          v-for="(discipline, index) in $store.state.disciplines"
           :key="index"
           class="my-2 col-sm col-md-6 col-lg-4 d-flex"
         >
@@ -35,14 +35,15 @@
       <h2>See documents by lifecycle</h2>
       <b-row>
         <div
-          v-for="(lifecycle, index) in lifecycles"
+          v-for="(lifecycle, index) in $store.state.lifecycles"
           :key="index"
           class="my-2 col-sm col-md-6 col-lg-4 align-self-stretch"
         >
           <b-card tag="div">
             <b-card-title>{{lifecycle.title}}</b-card-title>
 
-            <b-button href="/documents" variant="secondary" class="nt-auto">Go somewhere</b-button>
+            <!-- <b-button href="/documents" variant="secondary" class="nt-auto">Go somewhere</b-button> -->
+            <nuxt-link :to="'/documents/'+lifecycle.title.replace(' ', '+')">Go Go Go</nuxt-link>
           </b-card>
         </div>
       </b-row>
@@ -51,90 +52,7 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      disciplines: [
-        {
-          id: 1,
-          title: "General principles and scheme governance"
-        },
-        {
-          id: 2,
-          title: "Sustainability and Environment"
-        },
-        {
-          id: 3,
-          title: "Road layout"
-        },
-        {
-          id: 4,
-          title: "Pavement"
-        },
-        {
-          id: 5,
-          title: "Structures and Bridges"
-        },
-        {
-          id: 6,
-          title: "Drainage"
-        },
-        {
-          id: 7,
-          title: "Geotechnics"
-        },
-        {
-          id: 8,
-          title: "Control & Communications Technology"
-        },
-        {
-          id: 9,
-          title: "Road Lighting"
-        }
-      ],
-      lifecycles: [
-        {
-          id: 1,
-          title: "General Information"
-        },
-        {
-          id: 2,
-          title: "Appraisal"
-        },
-        {
-          id: 3,
-          title: "Design"
-        },
-        {
-          id: 4,
-          title: "Construction"
-        },
-        {
-          id: 5,
-          title: "Maintenance and Operation"
-        },
-        {
-          id: 6,
-          title: "Inspection and Assessment"
-        },
-        {
-          id: 7,
-          title: "Disposal"
-        }
-      ],
-      bcItems: [
-        {
-          text: "Standards for highways",
-          href: "http://www.standardsforhighways.co.uk"
-        },
-        {
-          text: "DMRB",
-          href: "#"
-        }
-      ]
-    };
-  }
-};
+export default {};
 </script>
 
 <style scoped>

@@ -1,4 +1,82 @@
 export const state = () => ({
+  disciplines: [
+    {
+      id: 1,
+      title: 'General principles and scheme governance',
+    },
+    {
+      id: 2,
+      title: 'Sustainability and Environment',
+    },
+    {
+      id: 3,
+      title: 'Road layout',
+    },
+    {
+      id: 4,
+      title: 'Pavement',
+    },
+    {
+      id: 5,
+      title: 'Structures and Bridges',
+    },
+    {
+      id: 6,
+      title: 'Drainage',
+    },
+    {
+      id: 7,
+      title: 'Geotechnics',
+    },
+    {
+      id: 8,
+      title: 'Control & Communications Technology',
+    },
+    {
+      id: 9,
+      title: 'Road Lighting',
+    },
+  ],
+  lifecycles: [
+    {
+      id: 1,
+      title: 'General Information',
+    },
+    {
+      id: 2,
+      title: 'Appraisal',
+    },
+    {
+      id: 3,
+      title: 'Design',
+    },
+    {
+      id: 4,
+      title: 'Construction',
+    },
+    {
+      id: 5,
+      title: 'Maintenance and Operation',
+    },
+    {
+      id: 6,
+      title: 'Inspection and Assessment',
+    },
+    {
+      id: 7,
+      title: 'Disposal',
+    },
+  ],
+  bcItems: [
+    {
+      text: 'Standards for highways',
+      href: 'http://www.standardsforhighways.co.uk',
+    },
+    {
+      text: 'DMRB',
+      href: '#',
+    },
+  ],
   documents: [],
   // disciplines: [],
 });
